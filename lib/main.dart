@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:moviees_app/home/bottom_nav.dart';
+import 'package:moviees_app/pages/detail_movie_page.dart';
+import 'package:moviees_app/pages/register_page.dart';
+import 'package:moviees_app/pages/selamat_page.dart';
 import './pages/login_page.dart';
 import './pages/splash_page.dart';
 
@@ -15,7 +19,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => SplashPage(),
+        '/selamat': (context) => SelamatPage(),
         '/sign-in': (context) => LoginPage(),
+        '/register': (context) => RegisterPage(),
+        '/home': (context) => MainPage(),
+        '/detail-movie': (context) => DetailMovie(),
       },
     );
   }
