@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Timer(
       Duration(seconds: 3),
-      () => Navigator.pushNamed(context, '/sign-in'),
+      () => Navigator.pushNamed(context, '/selamat'),
     );
 
     super.initState();
@@ -27,9 +27,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Center(
-        child: Text('MOVIEE.OEC',style: primaryTextStyle.copyWith(fontSize: 48,fontWeight: FontWeight.w700),)
-      ),
+      body: Center(child: Image.asset('assets/icons/icon_splash.png')),
     );
   }
 }
