@@ -79,6 +79,18 @@ flutter:
     - assets/img/rumble.jpg
     - assets/img/tokyo_drift.jpeg
     - assets/img/transformer.jpeg
+    - assets/img/Aladin.png
+    - assets/img/Mario.png
+    - assets/img/emily.png
+    - assets/img/Horor.png
+    - assets/img/It.png
+    - assets/img/Jojo.png
+    - assets/img/Parasite.png
+    - assets/img/Paw-patrol.png
+    - assets/img/Spider-man.png
+    - assets/img/Squid-game.png
+    - assets/img/Witcher.png
+
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:moviees_app/home/home_page.dart';
 import 'package:moviees_app/home/movie_page.dart';
 import 'package:moviees_app/home/profile_page.dart';
+import 'package:moviees_app/home/rekomen_page.dart';
 import 'package:moviees_app/theme.dart';
 
 class MainPage extends StatefulWidget {
@@ -74,7 +75,7 @@ class _MainPageState extends State<MainPage> {
           return HomePage();
           break;
         case 1:
-          return MoviePage();
+          return RekomenPage();
           break;
         case 2:
           return ProfilePage();

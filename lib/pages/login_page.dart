@@ -62,27 +62,40 @@ class LoginPage extends StatelessWidget {
       );
     }
 
-    Widget button() {
-      return Container(
-        margin: const EdgeInsets.only(top: 32),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: primaryColor,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: TextButton(
-          onPressed: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context, '/home', (route) => false);
-          },
-          child: Text(
-            'Login',
-            style: primaryTextStyleButton.copyWith(
-                fontSize: 20, fontWeight: FontWeight.w400),
+    Widget button(BuildContext context) {
+  return Container(
+    margin: const EdgeInsets.only(top: 32),
+    width: double.infinity,
+    decoration: BoxDecoration(
+      color: primaryColor,
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: TextButton(
+      onPressed: () {
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/home',
+          (route) => false,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Berhasil Login'),
+            duration: const Duration(seconds: 4),
           ),
+        );
+      },
+      child: Text(
+        'Login',
+        style: primaryTextStyleButton.copyWith(
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
         ),
-      );
-    }
+      ),
+    ),
+  );
+}
+
+
 
     Widget buttonGoogle() {
       return Container(
@@ -157,7 +170,7 @@ class LoginPage extends StatelessWidget {
                 header(),
                 emailInput(),
                 passwordInput(),
-                button(),
+                button(context),
                 const SizedBox(
                   height: 30,
                 ),

@@ -20,7 +20,9 @@ class HomePage extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.pushNamed(context,'/notifikasi-movie');
+            },
             icon: Icon(
               Icons.notifications,
               color: primaryColor,
@@ -53,7 +55,7 @@ class HomePage extends StatelessWidget {
                         InkWell(
                           onTap: () {
                             // Aksi yang akan dijalankan saat tombol ditekan
-                            Navigator.pushNamed(context,'/genre-movie');
+                            Navigator.pushNamed(context,'/category-movie');
                           },
                           borderRadius: BorderRadius.circular(8),
                           child: Container(
@@ -92,7 +94,7 @@ class HomePage extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               // Aksi yang akan dijalankan saat tombol ditekan
-                              Navigator.pushNamed(context, '/detail-movie');
+                              Navigator.pushNamed(context, '/cuplikan-movie');
                             },
                             borderRadius: BorderRadius.circular(8),
                             child: Container(
@@ -131,7 +133,7 @@ class HomePage extends StatelessWidget {
                         InkWell(
                           onTap: () {
                             // Aksi yang akan dijalankan saat tombol ditekan
-                            Navigator.pushNamed(context, '/detail-movie');
+                            Navigator.pushNamed(context, '/pengaturan');
                           },
                           borderRadius: BorderRadius.circular(8),
                           child: Container(

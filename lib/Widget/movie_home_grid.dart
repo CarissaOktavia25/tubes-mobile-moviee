@@ -23,6 +23,9 @@ class _MovieGridState extends State<MovieGrid> {
     },
     {
       'image': 'assets/img/transformer.jpeg',
+    },
+    {
+        'image': 'assets/img/emily.png',
     }
   ];
   @override
@@ -48,7 +51,8 @@ class _MovieGridState extends State<MovieGrid> {
               borderRadius: BorderRadius.circular(10),
               child: Image.asset(
                 '${gridMovie.elementAt(index)['image']}',
-                width: double.infinity,
+                  width: 150,
+                  height: 300,
                 fit: BoxFit.cover,
               ),
             ),

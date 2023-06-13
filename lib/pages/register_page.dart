@@ -117,7 +117,19 @@ class RegisterPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: TextButton(
-          onPressed: () {},
+              onPressed: () {
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/sign-in',
+          (route) => false,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Berhasil Mendaftar'),
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      },
           child: Text(
             'Register',
             style: primaryTextStyleButton.copyWith(

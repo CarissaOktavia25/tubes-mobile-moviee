@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SliderCardMovie extends StatefulWidget {
-  const SliderCardMovie({super.key});
+class SliderCardRekomen extends StatefulWidget {
+  const SliderCardRekomen({super.key});
 
   @override
-  State<SliderCardMovie> createState() => _SliderCardMovieState();
+  State<SliderCardRekomen> createState() => _SliderCardRekomenState();
 }
 
-class _SliderCardMovieState extends State<SliderCardMovie> {
+class _SliderCardRekomenState extends State<SliderCardRekomen> {
   PageController? _pageController;
   int _currentIndex = 0;
 
@@ -15,7 +15,7 @@ class _SliderCardMovieState extends State<SliderCardMovie> {
   void initState() {
     super.initState();
     _pageController = PageController(
-      viewportFraction: 0.8,
+      viewportFraction: 0.9,
     );
   }
 
@@ -28,7 +28,7 @@ class _SliderCardMovieState extends State<SliderCardMovie> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
-              'assets/img/rumble.jpg',
+              'assets/img/cars_movie.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -38,9 +38,9 @@ class _SliderCardMovieState extends State<SliderCardMovie> {
         child: GestureDetector(
           onTap: () {},
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(5),
             child: Image.asset(
-              'assets/img/banner_detail.png',
+              'assets/img/rumble_movie.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -50,9 +50,33 @@ class _SliderCardMovieState extends State<SliderCardMovie> {
         child: GestureDetector(
           onTap: () {},
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(5),
             child: Image.asset(
-              'assets/img/rumble.jpg',
+              'assets/img/transformer.jpeg',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+      Card(
+        child: GestureDetector(
+          onTap: () {},
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image.asset(
+              'assets/img/tokyo_drift.jpeg',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+      Card(
+        child: GestureDetector(
+          onTap: () {},
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image.asset(
+              'assets/img/demon_slayer.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -61,7 +85,8 @@ class _SliderCardMovieState extends State<SliderCardMovie> {
     ];
 
     return SizedBox(
-      height: 158,
+      height: 350,
+      width: 250,
       child: PageView.builder(
         controller: _pageController,
         itemCount: _cards.length,
